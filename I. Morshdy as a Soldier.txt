@@ -1,0 +1,71 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define HONDA                         \
+    ios_base::sync_with_stdio(false); \
+    cin.tie(NULL);                    \
+    cout.tie(NULL);
+typedef long double ld;
+typedef long long ll;
+#define mpll map<ll, ll>
+#define pi pair<int, int>
+#define pll pair<ll, ll>
+#define vi vector<int>
+#define vll vector<ll>
+#define vpll vector<pair<ll, ll>>
+#define X first
+#define Y second
+#define yes cout << "YES\n"
+#define no cout << "NO\n"
+#define pb push_back
+#define mpair make_pair
+#define all(a) a.begin(), a.end()
+#define fi(ii, n) for (ll i = ii; i < n; i++)
+#define fj(jj, n) for (ll j = jj; j < n; j++)
+#define fk(jj, n) for (ll k = jj; k < n; k++)
+#define fit(c) for (auto it = c.begin(); it != c.end(); ++it)
+#define sz(a) int((a).size())
+#define endl "\n"
+int dx[] = {1, -1, 0, 0};
+int dy[] = {0, 0, 1, -1};
+inline bool in(int i, int j, int rows, int cols)
+{
+    return i >= 0 && i < rows && j >= 0 && j < cols;
+}
+inline bool in(int i, int l, int h)
+{
+    return i >= l && i <= h;
+}
+using namespace std;
+
+
+void solve() {
+    ll n, q; cin >> n >> q;
+    priority_queue<tuple<ll, ll>> pq;
+    unordered_map<ll, ll> app2time, app2freq;
+
+    fi(0, q) {
+        int t, x; cin >> t >> x;
+        if(t == 1) {
+            // pq.push({i, })
+        }
+    }
+}
+
+
+int main()
+{
+#ifndef ONLINE_JUDGE
+    freopen("./input.txt", "r", stdin);
+    freopen("./output.txt", "w", stdout);
+#endif
+    HONDA
+
+    int t = 1;
+    // cin >> t;
+    while (t--)
+    {
+
+        solve();
+    }
+    return 0;
+}

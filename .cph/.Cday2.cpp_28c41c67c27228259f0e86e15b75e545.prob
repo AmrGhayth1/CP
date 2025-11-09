@@ -1,0 +1,1 @@
+{"name":"Local: Cday2","url":"/mnt/d/Desktop/CP/Cday2.cpp","tests":[{"id":1754081966430,"input":"2\n5\n12 54 2 1 4\n4 21 4 110 2\n5\n1000000000 1000000000 1 1 1000000000\n1000000000 1 2 3 4","output":"3\n3"},{"id":1754091834107,"input":"20","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/mnt/d/Desktop/CP/Cday2.cpp","group":"local","local":true}

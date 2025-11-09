@@ -1,0 +1,1 @@
+{"name":"Local: G","url":"/mnt/d/Desktop/CP/G.cpp","tests":[{"id":1754060869800,"input":"2\n5\n1 1 0 2 1\n5\n1 0 2 1 0 \n","output":"NO\nYES"},{"id":1754941605735,"input":"1\n5\n1 0 2 1 0 ","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/mnt/d/Desktop/CP/G.cpp","group":"local","local":true}

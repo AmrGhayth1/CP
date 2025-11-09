@@ -1,0 +1,38 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define all(a) a.begin(), a.end()
+#define fi(ii, n) for (ll i = ii; i < n; i++)
+#define fj(jj, n) for (ll j = jj; j < n; j++)
+#define fk(jj, n) for (ll k = jj; k < n; k++)
+#define AMR  ios::sync_with_stdio(0); cin.tie(0);
+ll lcm(ll a, ll b) { return (a * b) / __gcd(a, b); }
+
+int main()
+{
+    AMR
+        ll t = 1;
+    // cin >> t;
+    while (t--)
+    {
+        ll n;
+        cin >> n;
+        map<string, ll> m;
+        fi(0, n)
+        {
+            string s;
+            cin >> s;
+            m[s]++;
+            if (m[s] == 1)
+            {
+                cout << "OK" << endl;
+            }
+            else
+            {
+                cout << s << m[s] - 1 << endl;
+            }
+        }
+    }
+
+    return 0;
+}

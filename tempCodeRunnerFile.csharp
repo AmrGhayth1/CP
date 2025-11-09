@@ -1,0 +1,91 @@
+#include <iostream>
+using namespace std;
+int a, b, c, d;
+int x;
+bool endsum;
+bool oneleft;
+bool yesOrNo = true;
+
+int main()
+{
+	int t;
+	cin >> t;
+	
+	while (t != 0)
+	{
+		t--;
+		cin >> a >> b >> c >> d;
+		yesOrNo = true;
+		oneleft = false;
+		oneleft = false;
+
+		x = a - 1;
+		a = x;
+		b -= x;
+		c -= x;
+		d -= x;
+
+		if (b < 1)
+		{
+			d += 12;
+		}
+
+		if (c < 1)
+		{
+			c += 12;
+		}
+
+		if (d < 1)
+		{
+			d += 12;
+		}
+
+		for (int i = 1; i <= 12; i++)
+		{
+			if (i == c && endsum == false)
+			{
+				if (oneleft == false)
+				{
+					oneleft = true;
+				}
+				else
+				{
+					yesOrNo = false;
+				}
+			}
+
+			if (i == d && endsum == false)
+			{
+				if (oneleft == false)
+				{
+					oneleft = true;
+				}
+				else
+				{
+					yesOrNo = false;
+				}
+			}
+
+			if (i == b)
+			{
+				if (oneleft == false)
+				{
+					yesOrNo = false;
+				}
+				endsum = true;
+
+			}
+		}
+
+		if (yesOrNo == true)
+		{
+			cout << "yes" << endl;
+		}
+		else
+		{
+			cout << "no" << endl;
+		}
+	}
+
+}
+
