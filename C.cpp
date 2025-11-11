@@ -1,34 +1,45 @@
-#include <bits/stdc++.h>
-#include <ext/pb_ds/assoc_container.hpp>
-#include <ext/pb_ds/tree_policy.hpp>
+#include <iostream>
+#include <cmath>
+#include <iomanip>
 using namespace std;
-using namespace __gnu_pbds;
-template <typename T>
-using ordered_set = tree<T, null_type, less<T>, rb_tree_tag, tree_order_statistics_node_update>;
-#define ll long long
-#define ld long double
-#define all(a) a.begin(), a.end()
-#define endl "\n"
-#define AMR                  \
-    ios::sync_with_stdio(0); \
-    cin.tie(0);
-ll lcm(ll a, ll b) { return (a * b) / __gcd(a, b); }
-int dx[4] = {-1, 1, 0, 0};
-int dy[4] = {0, 0, -1, 1};
-typedef unsigned __int128 bll;
-const ll MOD = 1e9 + 7;
 
 int main() {
-    // بسم الله
-    AMR
-    ll t = 1 ;
-    cin >> t;
-    while (t--) {
-        ld x , y ; 
-        cin >> x >> y ; 
-        ld pi  = acos(-1) ;
-        ld fx =  
+    // Initial guesses
+    double x1 = 0, x2 = 0, x3 = 0, x4 = 0;
+    double x1_old, x2_old, x3_old, x4_old;
+    double ea1, ea2, ea3, ea4, ea_max;
+    const double es = 0.01; // Stopping criterion (%)
+    int iteration = 0;
 
-    }
+    cout << fixed << setprecision(6);
+
+    do {
+        iteration++;
+        x1_old = x1;
+        x2_old = x2;
+        x3_old = x3;
+        x4_old = x4;
+
+        // Gauss-Seidel formulas
+        x1 = (1.0/50)*(190 - 2*x2 + 31*x3 - 6*x4);
+        x2 = (1.0/-3)*(60 - x1 - 2*x3 + 55*x4);
+        x3 = (1.0/33)*(60 - 2*x1 - 24*x2 - 3*x4);
+        x4 = (1.0/3)*(80 - 3*x1 - 51*x2 - 2*x3);
+
+        // Calculate approximate errors
+        ea1 = fabs((x1 - x1_old) / x1) * 100.0;
+        ea2 = fabs((x2 - x2_old) / x2) * 100.0;
+        ea3 = fabs((x3 - x3_old) / x3) * 100.0;
+        ea4 = fabs((x4 - x4_old) / x4) * 100.0;
+
+        ea_max = max(ea1,max(ea2,max( ea3, ea4) ));
+
+        // Output
+        cout << "Iteration " << iteration << ": ";
+        cout << "x1 = " << x1 << ", x2 = " << x2 << ", x3 = " << x3 << ", x4 = " << x4;
+        cout << ", Max Error = " << ea_max << "%" << endl;
+
+    } while (ea_max > es);
+
     return 0;
 }
